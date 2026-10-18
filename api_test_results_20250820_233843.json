@@ -1,0 +1,174 @@
+{
+  "timestamp": "2025-08-20T23:38:43.667306",
+  "base_url": "http://localhost:8000",
+  "test_credentials": {
+    "patient": {
+      "username": "patient4",
+      "password": "testpass123",
+      "user_id": 23,
+      "name": "Patience Kamanthe"
+    },
+    "doctor": {
+      "username": "doctor3",
+      "password": "testpass123",
+      "user_id": 25,
+      "name": "Allan Tuikong"
+    }
+  },
+  "results": [
+    {
+      "endpoint": "/api/sms/webhook/",
+      "method": "POST",
+      "status": "FAILED",
+      "status_code": 500,
+      "expected_status": 200,
+      "response_time": 2.437,
+      "response": "{\n  \"status\": \"error\",\n  \"message\": \"Internal server error\"\n}",
+      "url": "http://localhost:8000/api/sms/webhook/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/voice/webhook/",
+      "method": "POST",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.012,
+      "response": "{\n  \"status\": \"error\",\n  \"message\": \"Please register through our mobile app or call our helpline.\",\n  \"voice_response\": \"Please register through our mobile app or call our helpline.\"\n}",
+      "url": "http://localhost:8000/api/voice/webhook/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/symptoms/analyze/",
+      "method": "POST",
+      "status": "FAILED",
+      "status_code": 404,
+      "expected_status": 200,
+      "response_time": 0.013,
+      "response": "{\n  \"success\": false,\n  \"message\": \"Patient not found\"\n}",
+      "url": "http://localhost:8000/api/symptoms/analyze/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/symptoms/submit/",
+      "method": "POST",
+      "status": "FAILED",
+      "status_code": 401,
+      "expected_status": 200,
+      "response_time": 0.016,
+      "response": "{\n  \"success\": false,\n  \"message\": \"Authentication required\"\n}",
+      "url": "http://localhost:8000/api/symptoms/submit/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/emergency/alerts/",
+      "method": "GET",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.043,
+      "response": "{\n  \"emergency_alerts\": [\n    {\n      \"id\": 10,\n      \"patient\": {\n        \"id\": 23,\n        \"user\": {\n          \"id\": 57,\n          \"username\": \"patient1\",\n          \"email\": \"patient1@demo.com\",\n          \"first_name\": \"Alice\",\n          \"last_name\": \"Wanjiru\",\n          \"profile\": {}\n        },\n        \"emergency_contacts\": [],\n        \"insurance_info\": {},\n        \"allergies\": \"None\",\n        \"blood_type\": \"O+\",\n        \"date_of_birth\": \"1990-05-14\",\n        \"gender\": \"Female\",\n        \"address\": \"123 Main St\",\n        \"phone_number\": \"0712345678\",\n        \"emergency_contact\": \"John Ochieng\",\n        \"medical_history\": \"No major conditions\",\n        \"created_at\": \"2025-08-20T15:42:56.737463+03:00\",\n        \"updated_at\": \"2025-08-20T15:42:56.737487+03:00\",\n        \"location\": \"\"\n      },\n      \"symptom\": {\n        \"id\": 1053,\n        \"patient\": {\n          \"id\": 23,\n          \"user\": {\n            \"id\": 57,\n            \"username\": \"patient1\",\n            \"email\": \"patient1@demo.com\"",
+      "url": "http://localhost:8000/api/emergency/alerts/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/emergency/update-status/",
+      "method": "POST",
+      "status": "FAILED",
+      "status_code": 404,
+      "expected_status": 200,
+      "response_time": 0.011,
+      "response": "{\n  \"status\": \"error\",\n  \"message\": \"Emergency alert not found\"\n}",
+      "url": "http://localhost:8000/api/emergency/update-status/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/hospital/capacity/",
+      "method": "GET",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.01,
+      "response": "{\n  \"success\": true,\n  \"data\": {\n    \"total_beds\": 302,\n    \"available_beds\": 258,\n    \"icu_beds\": 15,\n    \"available_icu\": 15,\n    \"emergency_rooms\": 20,\n    \"available_emergency\": 20,\n    \"average_wait_time\": 1\n  }\n}",
+      "url": "http://localhost:8000/api/hospital/capacity/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/hospital/capacity/update/",
+      "method": "POST",
+      "status": "FAILED",
+      "status_code": 400,
+      "expected_status": 200,
+      "response_time": 0.007,
+      "response": "{\n  \"status\": \"error\",\n  \"message\": \"Department, total beds, and occupied beds are required\"\n}",
+      "url": "http://localhost:8000/api/hospital/capacity/update/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/analytics/dashboard/",
+      "method": "GET",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.016,
+      "response": "{\n  \"totalPatients\": 11,\n  \"totalDoctors\": 6,\n  \"activeEmergencies\": 1,\n  \"todayAppointments\": 1,\n  \"systemHealth\": \"healthy\",\n  \"responseTime\": 120\n}",
+      "url": "http://localhost:8000/api/analytics/dashboard/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/analytics/symptoms/",
+      "method": "GET",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.02,
+      "response": "{\n  \"totalReports\": 4,\n  \"emergencyCount\": 1,\n  \"averageConfidence\": 0.9624999999999999,\n  \"topSymptoms\": [\n    {\n      \"name\": \"nausea (Location: stomach, Duration: 3 days, Repor\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"headache (Location: head, Duration: 2 hours, Repor\",\n      \"count\": 1\n    },\n    {\n      \"name\": \"fever (Location: head, Duration: 3 days, Reported \",\n      \"count\": 1\n    },\n    {\n      \"name\": \"chest pain (Location: chest, Duration: 1 week, Rep\",\n      \"count\": 1\n    }\n  ]\n}",
+      "url": "http://localhost:8000/api/analytics/symptoms/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/health/",
+      "method": "GET",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.008,
+      "response": "{\n  \"status\": \"healthy\",\n  \"timestamp\": \"2025-08-20T20:38:43.480683+00:00\",\n  \"services\": {\n    \"database\": \"healthy\",\n    \"ai_services\": \"healthy\",\n    \"communication_services\": \"healthy\"\n  }\n}",
+      "url": "http://localhost:8000/api/health/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/admin/",
+      "method": "GET",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.096,
+      "response": "<!DOCTYPE html>\n\n<html lang=\"en-us\" dir=\"ltr\">\n<head>\n<title>Log in | Django site admin</title>\n<link rel=\"stylesheet\" href=\"/static/admin/css/base.css\">\n\n  <link rel=\"stylesheet\" href=\"/static/admin/css/dark_mode.css\">\n  <script src=\"/static/admin/js/theme.js\" defer></script>\n\n\n  <link rel=\"stylesheet\" href=\"/static/admin/css/nav_sidebar.css\">\n  <script src=\"/static/admin/js/nav_sidebar.js\" defer></script>\n\n<link rel=\"stylesheet\" href=\"/static/admin/css/login.css\">\n\n\n\n\n\n    <meta name=\"viewport",
+      "url": "http://localhost:8000/admin/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/dashboard/",
+      "method": "GET",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.027,
+      "response": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>AI Healthcare Platform - API Dashboard</title>\n    <style>\n        * {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n\n        body {\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n            min-he",
+      "url": "http://localhost:8000/dashboard/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/patients/",
+      "method": "GET",
+      "status": "FAILED",
+      "status_code": 401,
+      "expected_status": 200,
+      "response_time": 0.016,
+      "response": "{\n  \"success\": false,\n  \"message\": \"Authentication required\"\n}",
+      "url": "http://localhost:8000/api/patients/",
+      "session_type": "anonymous"
+    }
+  ]
+}

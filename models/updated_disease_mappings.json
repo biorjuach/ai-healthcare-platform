@@ -1,0 +1,74 @@
+{
+  "updated_at": "2025-08-08T00:14:47.780952",
+  "data_period_days": 365,
+  "total_samples": 35,
+  "symptom_disease_mapping": {},
+  "symptom_clusters": {
+    "cluster_0": {
+      "symptoms": [
+        "cough",
+        "cough",
+        "cough",
+        "cough"
+      ],
+      "diagnoses": [
+        "Influenza",
+        "Influenza",
+        "Influenza",
+        "Influenza"
+      ],
+      "size": 4
+    },
+    "cluster_1": {
+      "symptoms": [
+        "headache",
+        "headache"
+      ],
+      "diagnoses": [
+        "Migraine",
+        "Migraine"
+      ],
+      "size": 2
+    },
+    "cluster_2": {
+      "symptoms": [
+        "shortness of breath",
+        "shortness of breath"
+      ],
+      "diagnoses": [
+        "Pneumonia",
+        "Pneumonia"
+      ],
+      "size": 2
+    },
+    "cluster_3": {
+      "symptoms": [
+        "sore throat (for patient3)",
+        "sore throat (for patient4)",
+        "sore throat (for patient5)",
+        "sore throat (for patient1)",
+        "sore throat (for patient2)"
+      ],
+      "diagnoses": [
+        "Gastroenteritis (for patient3)",
+        "Gastroenteritis (for patient4)",
+        "Gastroenteritis (for patient5)",
+        "Gastroenteritis (for patient1)",
+        "Gastroenteritis (for patient2)"
+      ],
+      "size": 5
+    }
+  },
+  "statistics": {
+    "total_cases": 35,
+    "unique_symptoms": 30,
+    "unique_diagnoses": 30,
+    "average_severity": 1.9142857142857144,
+    "average_confidence": 0.8000000000000002,
+    "average_patient_age": 38.74285714285714,
+    "gender_distribution": {
+      "male": 23,
+      "female": 12
+    }
+  }
+}

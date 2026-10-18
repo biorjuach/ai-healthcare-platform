@@ -1,0 +1,34 @@
+{
+  "trained_at": "2025-08-08T00:13:24.439699",
+  "accuracy": 1.0,
+  "cv_score_mean": 0.9714285714285715,
+  "cv_score_std": 0.05714285714285716,
+  "training_samples": 28,
+  "test_samples": 7,
+  "classes": [
+    "general_consultation",
+    "tension_headache",
+    "respiratory_infection",
+    "asthma",
+    "anemia",
+    "food_poisoning",
+    "bacterial_infection"
+  ],
+  "feature_names": [
+    "breath",
+    "cough",
+    "fatigue",
+    "fever",
+    "headache",
+    "patient1",
+    "patient2",
+    "patient3",
+    "patient4",
+    "patient5",
+    "shortness",
+    "shortness breath",
+    "sore",
+    "sore throat",
+    "throat"
+  ]
+}

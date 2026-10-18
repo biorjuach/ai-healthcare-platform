@@ -1,0 +1,160 @@
+{
+  "timestamp": "2025-08-10T02:31:44.167052",
+  "base_url": "http://localhost:8000",
+  "results": [
+    {
+      "endpoint": "/api/sms/webhook/",
+      "method": "POST",
+      "status": "FAILED",
+      "status_code": 500,
+      "expected_status": 200,
+      "response_time": 2.036,
+      "response": "{\n  \"status\": \"error\",\n  \"message\": \"Internal server error\"\n}",
+      "url": "http://localhost:8000/api/sms/webhook/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/voice/webhook/",
+      "method": "POST",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.005,
+      "response": "{\n  \"status\": \"error\",\n  \"message\": \"Please register through our mobile app or call our helpline.\",\n  \"voice_response\": \"Please register through our mobile app or call our helpline.\"\n}",
+      "url": "http://localhost:8000/api/voice/webhook/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/symptoms/analyze/",
+      "method": "POST",
+      "status": "FAILED",
+      "status_code": 500,
+      "expected_status": 200,
+      "response_time": 0.011,
+      "response": "{\n  \"status\": \"error\",\n  \"message\": \"Internal server error\"\n}",
+      "url": "http://localhost:8000/api/symptoms/analyze/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/symptoms/submit/",
+      "method": "POST",
+      "status": "FAILED",
+      "status_code": 500,
+      "expected_status": 200,
+      "response_time": 0.008,
+      "response": "{\n  \"status\": \"error\",\n  \"message\": \"Internal server error\"\n}",
+      "url": "http://localhost:8000/api/symptoms/submit/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/emergency/alerts/",
+      "method": "GET",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.043,
+      "response": "{\n  \"emergency_alerts\": [\n    {\n      \"id\": 1,\n      \"patient\": {\n        \"id\": 1,\n        \"user\": {\n          \"id\": 22,\n          \"username\": \"patient3\",\n          \"email\": \"patient3@example.com\",\n          \"first_name\": \"Michael\",\n          \"last_name\": \"Katua\",\n          \"profile\": {}\n        },\n        \"emergency_contacts\": [],\n        \"insurance_info\": {},\n        \"allergies\": \"Shellfish\",\n        \"blood_type\": \"B+\",\n        \"date_of_birth\": \"1988-03-15\",\n        \"gender\": \"male\",\n        \"address\": \"789 Pine St\",\n        \"phone_number\": \"3456789012\",\n        \"emergency_contact\": \"7654321098\",\n        \"medical_history\": \"Hypertension\",\n        \"created_at\": \"2025-06-13T17:37:06.004638+03:00\",\n        \"updated_at\": \"2025-06-13T17:37:06.004725+03:00\",\n        \"location\": \"\"\n      },\n      \"symptom\": {\n        \"id\": 1,\n        \"patient\": {\n          \"id\": 1,\n          \"user\": {\n            \"id\": 22,\n            \"username\": \"patient3\",\n            \"email\": \"patient3@example.com\",\n    ",
+      "url": "http://localhost:8000/api/emergency/alerts/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/emergency/update-status/",
+      "method": "POST",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.12,
+      "response": "{\n  \"status\": \"success\",\n  \"emergency_alert\": {\n    \"id\": 1,\n    \"patient\": {\n      \"id\": 1,\n      \"user\": {\n        \"id\": 22,\n        \"username\": \"patient3\",\n        \"email\": \"patient3@example.com\",\n        \"first_name\": \"Michael\",\n        \"last_name\": \"Katua\",\n        \"profile\": {}\n      },\n      \"emergency_contacts\": [],\n      \"insurance_info\": {},\n      \"allergies\": \"Shellfish\",\n      \"blood_type\": \"B+\",\n      \"date_of_birth\": \"1988-03-15\",\n      \"gender\": \"male\",\n      \"address\": \"789 Pine St\",\n      \"phone_number\": \"3456789012\",\n      \"emergency_contact\": \"7654321098\",\n      \"medical_history\": \"Hypertension\",\n      \"created_at\": \"2025-06-13T17:37:06.004638+03:00\",\n      \"updated_at\": \"2025-06-13T17:37:06.004725+03:00\",\n      \"location\": \"\"\n    },\n    \"symptom\": {\n      \"id\": 1,\n      \"patient\": {\n        \"id\": 1,\n        \"user\": {\n          \"id\": 22,\n          \"username\": \"patient3\",\n          \"email\": \"patient3@example.com\",\n          \"first_name\": \"Michael\",\n          \"last_nam",
+      "url": "http://localhost:8000/api/emergency/update-status/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/hospital/capacity/",
+      "method": "GET",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.009,
+      "response": "{\n  \"departments\": [\n    {\n      \"id\": 1,\n      \"department\": \"Operation\",\n      \"total_beds\": 30,\n      \"occupied_beds\": 5,\n      \"available_doctors\": 2,\n      \"last_updated\": \"2025-06-12T18:24:11.711053+03:00\",\n      \"waiting_list\": 3,\n      \"average_wait_time\": 14,\n      \"emergency_capacity\": 3,\n      \"is_accepting_patients\": true,\n      \"special_notes\": \"\"\n    }\n  ],\n  \"total_beds\": 30,\n  \"available_beds\": 25,\n  \"occupancy_rate\": 16.666666666666664\n}",
+      "url": "http://localhost:8000/api/hospital/capacity/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/hospital/capacity/update/",
+      "method": "POST",
+      "status": "FAILED",
+      "status_code": 400,
+      "expected_status": 200,
+      "response_time": 0.003,
+      "response": "{\n  \"status\": \"error\",\n  \"message\": \"Department, total beds, and occupied beds are required\"\n}",
+      "url": "http://localhost:8000/api/hospital/capacity/update/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/analytics/dashboard/",
+      "method": "GET",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.006,
+      "response": "{\n  \"totalPatients\": 5,\n  \"totalDoctors\": 5,\n  \"activeEmergencies\": 8,\n  \"todayAppointments\": 23,\n  \"systemHealth\": \"healthy\",\n  \"responseTime\": 120\n}",
+      "url": "http://localhost:8000/api/analytics/dashboard/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/analytics/symptoms/",
+      "method": "GET",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.01,
+      "response": "{\n  \"totalReports\": 156,\n  \"emergencyCount\": 12,\n  \"averageConfidence\": 0.85,\n  \"topSymptoms\": [\n    {\n      \"name\": \"Fever\",\n      \"count\": 45\n    },\n    {\n      \"name\": \"Headache\",\n      \"count\": 38\n    },\n    {\n      \"name\": \"Cough\",\n      \"count\": 32\n    },\n    {\n      \"name\": \"Fatigue\",\n      \"count\": 28\n    },\n    {\n      \"name\": \"Nausea\",\n      \"count\": 22\n    }\n  ]\n}",
+      "url": "http://localhost:8000/api/analytics/symptoms/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/health/",
+      "method": "GET",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.006,
+      "response": "{\n  \"status\": \"healthy\",\n  \"timestamp\": \"2025-08-09T23:31:44.052586+00:00\",\n  \"services\": {\n    \"database\": \"healthy\",\n    \"ai_services\": \"healthy\",\n    \"communication_services\": \"healthy\"\n  }\n}",
+      "url": "http://localhost:8000/api/health/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/admin/",
+      "method": "GET",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.041,
+      "response": "<!DOCTYPE html>\n\n<html lang=\"en-us\" dir=\"ltr\">\n<head>\n<title>Log in | Django site admin</title>\n<link rel=\"stylesheet\" href=\"/static/admin/css/base.css\">\n\n  <link rel=\"stylesheet\" href=\"/static/admin/css/dark_mode.css\">\n  <script src=\"/static/admin/js/theme.js\" defer></script>\n\n\n  <link rel=\"stylesheet\" href=\"/static/admin/css/nav_sidebar.css\">\n  <script src=\"/static/admin/js/nav_sidebar.js\" defer></script>\n\n<link rel=\"stylesheet\" href=\"/static/admin/css/login.css\">\n\n\n\n\n\n    <meta name=\"viewport",
+      "url": "http://localhost:8000/admin/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/dashboard/",
+      "method": "GET",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.003,
+      "response": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>AI Healthcare Platform - API Dashboard</title>\n    <style>\n        * {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n\n        body {\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n            min-he",
+      "url": "http://localhost:8000/dashboard/",
+      "session_type": "anonymous"
+    },
+    {
+      "endpoint": "/api/patients/",
+      "method": "GET",
+      "status": "SUCCESS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time": 0.034,
+      "response": "[\n  {\n    \"id\": 1,\n    \"user\": {\n      \"id\": 22,\n      \"username\": \"patient3\",\n      \"email\": \"patient3@example.com\",\n      \"first_name\": \"Michael\",\n      \"last_name\": \"Katua\",\n      \"profile\": {}\n    },\n    \"emergency_contacts\": [],\n    \"insurance_info\": {},\n    \"allergies\": \"Shellfish\",\n    \"blood_type\": \"B+\",\n    \"date_of_birth\": \"1988-03-15\",\n    \"gender\": \"male\",\n    \"address\": \"789 Pine St\",\n    \"phone_number\": \"3456789012\",\n    \"emergency_contact\": \"7654321098\",\n    \"medical_history\": \"Hypertension\",\n    \"created_at\": \"2025-06-13T17:37:06.004638+03:00\",\n    \"updated_at\": \"2025-06-13T17:37:06.004725+03:00\",\n    \"location\": \"\"\n  },\n  {\n    \"id\": 2,\n    \"user\": {\n      \"id\": 23,\n      \"username\": \"patient4\",\n      \"email\": \"patient4@example.com\",\n      \"first_name\": \"Patience\",\n      \"last_name\": \"Kamanthe\",\n      \"profile\": {}\n    },\n    \"emergency_contacts\": [],\n    \"insurance_info\": {},\n    \"allergies\": \"Peanuts\",\n    \"blood_type\": \"AB+\",\n    \"date_of_birth\": \"1992-07-22\",\n    \"",
+      "url": "http://localhost:8000/api/patients/",
+      "session_type": "anonymous"
+    }
+  ]
+}
